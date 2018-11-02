@@ -44,19 +44,38 @@ para.addEventListener('click', function () {
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
     para.style.color = randomColor;
 });
+// // #5 Add a button and an empty div.
+
+let button3 = document.createElement("button");
+let buttonText3 = document.createTextNode("Button3");
+button3.appendChild(buttonText3);
+document.body.appendChild(button3);
+let div3 = document.createElement("div");
+document.body.appendChild(div3);
 
 
+//#5b When the button is clicked, add a span that contains your name to the empty div.
+button3.addEventListener('click', function () {
+    let name = document.createElement("SPAN");
+    let sName = document.createTextNode('Tameka');
+    document.body.appendChild(name);
+    name.appendChild(sName);
+   
+});
 
+// #6b create an array containing the names of your friends  When the button is clicked, add each friend's name as an li to the ul on the page
+let friends = ['Marrea', 'Tavanya', 'Sonja', 'Debra', 'Mark', 'Thomas', 'Tamara', 'Austin', 'Asher', 'Tameka'];
 
+let button4 = document.getElementById('btnFriends');
+let ul = document.getElementById('ulFriends');
 
-
-
-
-
-
-
-
-
-
+button4.addEventListener("click", function () {
+    for (let i = 0; i < friends.length; i++) {
+        let li = document.createElement("li");
+        let name = document.createTextNode(friends[i]);
+        li.appendChild(name);
+        ul.appendChild(li);
+    }
+});
 
 
